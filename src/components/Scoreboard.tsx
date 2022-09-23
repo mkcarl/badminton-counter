@@ -1,10 +1,26 @@
 import React from "react";
-import {Typography} from "@mui/material";
+import {Box, Chip, Typography} from "@mui/material";
 
-export class Scoreboard extends React.Component{
+type MyProp = {
+    red: number;
+    blue: number;
+}
+type MyState = {
+
+}
+
+export class Scoreboard extends React.Component<MyProp, MyState>{
+    constructor(props : MyProp) {
+        super(props);
+    }
     render() {
         return (
-            <Typography variant={"h1"}>Scoreboard</Typography>
+            <Box sx={{height:'15vh'}}>
+                <Typography variant={'h6'} fontSize={'3rem'}>
+                    {`${this.props.blue} - ${this.props.red}`}
+                </Typography>
+            </Box>
+
         );
     }
 }
