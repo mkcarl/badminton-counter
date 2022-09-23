@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Badminton Counter",
+  "name": "Imagine keeping track manually",
   "icons": [
     {
       "src": "favicon.ico",

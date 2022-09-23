@@ -28,12 +28,14 @@ export class Game extends React.Component<MyProp, MyState> {
     }
 
     updateBlueScore(value:number){
+        if (value < 0 && this.state.blue == 0) return
         this.setState({
             blue: this.state.blue + value
         })
     }
 
     updateRedScore(value:number){
+        if (value < 0 && this.state.red == 0) return
         this.setState({
             red: this.state.red + value
         })
