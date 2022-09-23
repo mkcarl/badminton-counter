@@ -14,11 +14,13 @@ export class Team extends React.Component<MyProp, MyState> {
     }
     render() {
         return (
-            <Paper sx={{padding:'1rem', height:'60vh', backgroundColor: this.props.color ?? 'white'}}
-                   onClick={()=>{this.props.scoreUpdater(1)}}
-                   onDoubleClick={()=>{console.log('double click')}}
-            >
-            </Paper>
-        );
+            <>
+                <Paper sx={{padding:'1rem', margin:'0.5rem', height:'50vh', backgroundColor: this.props.color ?? 'white'}}
+                       onClick={()=>{this.props.scoreUpdater(1)}}>
+                </Paper>
+                <Button variant={'contained'} color={'error'} onClick={()=>{this.props.scoreUpdater(-1)}}>UNDO</Button>
+            </>
+
+    );
     }
 }
